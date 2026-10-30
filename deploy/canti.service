@@ -1,0 +1,19 @@
+[Unit]
+Description=Server REST per la proiezione dei canti
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/canti-in-chiesa
+EnvironmentFile=-/home/pi/canti-in-chiesa/.env
+ExecStart=/home/pi/canti-in-chiesa/.venv/bin/python /home/pi/canti-in-chiesa/server.py
+Restart=on-failure
+RestartSec=2
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

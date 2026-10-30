@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Canti in Chiesa kiosk
+Exec=chromium --kiosk --noerrdialogs --disable-infobars http://127.0.0.1:8787/
+X-GNOME-Autostart-enabled=true
